@@ -71,7 +71,7 @@
     </build>
 
     <properties>
-        <liquibase.version>3.8.5</liquibase.version>
+        <liquibase.version>3.8.9</liquibase.version>
         <junit.version>4.11</junit.version>
         <maven.compiler.version>3.1</maven.compiler.version>
         <mockito.core.version>3.2.4</mockito.core.version>
