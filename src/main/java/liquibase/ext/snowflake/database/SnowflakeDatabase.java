@@ -1,6 +1,7 @@
 package liquibase.ext.snowflake.database;
 
 import liquibase.CatalogAndSchema;
+import liquibase.Scope;
 import liquibase.database.AbstractJdbcDatabase;
 import liquibase.database.DatabaseConnection;
 import liquibase.database.jvm.JdbcConnection;
@@ -17,7 +18,6 @@ import java.util.Set;
 
 public class SnowflakeDatabase extends AbstractJdbcDatabase {
 
-    private Logger log = new LogFactory().getLog();
     public static final String PRODUCT_NAME = "Snowflake";
     private Set<String> systemTables = new HashSet<>();
     private Set<String> systemViews = new HashSet<>();
@@ -181,7 +181,7 @@ public class SnowflakeDatabase extends AbstractJdbcDatabase {
             String schema = resultSet.getString(1);
             return schema;
         } catch (Exception e) {
-            log.info("Error getting default schema", e);
+            Scope.getCurrentScope().getLog(getClass()).info("Error getting default schema", e);
         }
         return null;
     }
