@@ -1,0 +1,1 @@
+liquibase.ext.snowflake.datatype.TimestampNTZType
