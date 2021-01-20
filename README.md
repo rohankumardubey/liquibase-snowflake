@@ -41,3 +41,9 @@ The `TimestampNTZType` class clarifies this mapping from Liquibase `datetime` to
 ## ChangeLog
 
 2020-02-02 : upgrade to liquibase 3.8.5
+
+
+## Using the Liquibase Test Harness in Extensions
+The liquibase-snowflake extension now comes with integration test support via the liquibase-test-harness. 
+
+For more information on using the test-harness to test the snowflake extension, see [README.test-harness.md] 
