@@ -1,5 +1,4 @@
-# liquibase-snowflake
-[![Build Status](https://travis-ci.com/liquibase/liquibase-snowflake.svg?branch=master)](https://travis-ci.com/liquibase/liquibase-snowflake)
+# liquibase-snowflake [![Build and Test Extension](https://github.com/liquibase/liquibase-snowflake/actions/workflows/build.yml/badge.svg)](https://github.com/liquibase/liquibase-snowflake/actions/workflows/build.yml)
 
 [Liquibase](http://www.liquibase.org/) extension to add [Snowflake](https://www.snowflake.net/) support.  This repo should be considered the canonical version of the Snowflake extension and represents the latest and greatest version.
 
