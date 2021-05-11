@@ -1,5 +1,4 @@
-# liquibase-snowflake
-[![Build Status](https://travis-ci.com/liquibase/liquibase-snowflake.svg?branch=master)](https://travis-ci.com/liquibase/liquibase-snowflake)
+# liquibase-snowflake [![Build and Test Extension](https://github.com/liquibase/liquibase-snowflake/actions/workflows/build.yml/badge.svg)](https://github.com/liquibase/liquibase-snowflake/actions/workflows/build.yml)
 
 [Liquibase](http://www.liquibase.org/) extension to add [Snowflake](https://www.snowflake.net/) support.  This repo should be considered the canonical version of the Snowflake extension and represents the latest and greatest version.
 
@@ -36,8 +35,14 @@ See [getJdbcCatalogName](#getJdbcCatalogName)
 
 The `datetime` datatype in Snowflake is an alias for the datatype `timestamp_ntz`, [Date and Time Data Types](https://docs.snowflake.net/manuals/sql-reference/data-types.html#date-and-time-data-types).
 The `TimestampNTZType` class clarifies this mapping from Liquibase `datetime` to Snowflake `timestamp_ntz`.
-
+To map `text` datatype in changesets to `text` Snowflake datatype SnowflakeTextDataType class is added (default liquibase-core classes maps it to `CLOB`)
 
 ## ChangeLog
 
 2020-02-02 : upgrade to liquibase 3.8.5
+
+
+## Using the Liquibase Test Harness in Extensions
+The liquibase-snowflake extension now comes with integration test support via the liquibase-test-harness. 
+
+For more information on using the test-harness to test the snowflake extension, see [README.test-harness.md] 
