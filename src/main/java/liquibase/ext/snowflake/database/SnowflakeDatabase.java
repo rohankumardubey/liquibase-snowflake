@@ -25,6 +25,8 @@ public class SnowflakeDatabase extends AbstractJdbcDatabase {
         super.unmodifiableDataTypes.addAll(Arrays.asList("integer", "bool", "boolean", "int4", "int8", "float4", "float8", "numeric", "bigserial", "serial", "bytea", "timestamptz"));
         super.unquotedObjectsAreUppercased = true;
         super.addReservedWords(getDefaultReservedWords());
+        super.defaultAutoIncrementStartWith = BigInteger.ONE;
+        super.defaultAutoIncrementBy = BigInteger.ONE;
     }
 
     @Override
@@ -102,13 +104,6 @@ public class SnowflakeDatabase extends AbstractJdbcDatabase {
         return false;
     }
 
-    public String getAutoIncrementClause(BigInteger startWith, BigInteger incrementBy) {
-        if (startWith != null && incrementBy != null) {
-            return " AUTOINCREMENT(" + startWith + "," + incrementBy + ") ";
-        }
-        return " AUTOINCREMENT ";
-    }
-
     @Override
     public boolean supportsAutoIncrement() {
         return true;
@@ -116,7 +111,15 @@ public class SnowflakeDatabase extends AbstractJdbcDatabase {
 
     @Override
     public String getAutoIncrementClause() {
-        return "";
+        return "AUTOINCREMENT";
+    }
+
+    protected String getAutoIncrementStartWithClause() {
+        return "%d";
+    }
+
+    protected String getAutoIncrementByClause() {
+        return "%d";
     }
 
     @Override
