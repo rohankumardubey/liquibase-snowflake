@@ -6,18 +6,13 @@
          http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
     <!--https://docs.liquibase.com/change-types/community/add-default-value.html-->
     <changeSet author="oleh" id="1">
-        <createSequence sequenceName="test_sequence"
-                        incrementBy="1"
-                        startValue="10"/>
-    </changeSet>
-    <changeSet author="oleh" id="2">
         <createTable tableName="dropDefaultTest">
             <column name="id" type="int"/>
             <column name="stringColumn" type="string" defaultValue="testDefault">
             </column>
         </createTable>
     </changeSet>
-    <changeSet author="oleh" id="3">
+    <changeSet author="oleh" id="2">
         <dropDefaultValue tableName="dropDefaultTest" columnName="stringColumn"/>
     </changeSet>
 </databaseChangeLog>

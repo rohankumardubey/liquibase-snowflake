@@ -19,9 +19,6 @@ INSERT INTO authors VALUES ('1','Eileen','Lubowitz','ppaucek@example.org','1991-
                            ('4','Nicolas','Buckridge','xhoeger@example.net','2017-02-03','2019-04-22 02:04:41'),
                            ('5','Jayden','Walter','lillian66@example.com','2010-02-27','1990-02-04 02:32:00');
 
-
-
-
 DROP TABLE IF EXISTS posts;
 CREATE TABLE posts (
                        id int NOT NULL,
