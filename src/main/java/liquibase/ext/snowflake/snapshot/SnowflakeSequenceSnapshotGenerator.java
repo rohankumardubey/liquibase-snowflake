@@ -5,6 +5,7 @@ import liquibase.ext.snowflake.database.SnowflakeDatabase;
 import liquibase.snapshot.SnapshotGenerator;
 import liquibase.snapshot.jvm.SequenceSnapshotGenerator;
 import liquibase.structure.DatabaseObject;
+import liquibase.structure.core.Column;
 import liquibase.structure.core.Schema;
 
 public class SnowflakeSequenceSnapshotGenerator extends SequenceSnapshotGenerator {
@@ -20,17 +21,18 @@ public class SnowflakeSequenceSnapshotGenerator extends SequenceSnapshotGenerato
 
     @Override
     public Class<? extends SnapshotGenerator>[] replaces() {
-        return new Class[] { SequenceSnapshotGenerator.class };
+        return new Class[]{SequenceSnapshotGenerator.class};
     }
 
     @Override
     protected String getSelectSequenceSql(Schema schema, Database database) {
         if (database instanceof SnowflakeDatabase) {
-            return "SHOW SEQUENCES IN " + database.getDefaultCatalogName().toUpperCase() + "." + database.getDefaultSchemaName().toUpperCase();
+            return "SELECT SEQUENCE_NAME, START_VALUE, MINIMUM_VALUE AS MIN_VALUE, MAXIMUM_VALUE AS MAX_VALUE, " +
+                    database.escapeObjectName("INCREMENT", Column.class) + " AS INCREMENT_BY, " +
+                    "CYCLE_OPTION AS WILL_CYCLE FROM information_schema.sequences " +
+                    "WHERE SEQUENCE_CATALOG='" + database.getDefaultCatalogName() + "' AND " +
+                    "SEQUENCE_SCHEMA='" + database.getDefaultSchemaName() + "'";
         }
-
         return super.getSelectSequenceSql(schema, database);
-
     }
-
 }
