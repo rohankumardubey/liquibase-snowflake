@@ -1,3 +1,5 @@
 liquibase.ext.snowflake.sqlgenerator.SnowflakeRenameTableGenerator
 liquibase.ext.snowflake.sqlgenerator.SnowflakeRenameViewGenerator
-liquibase.ext.snowflake.sqlgenerator.DropDefaultValueSnapshotGenerator
+liquibase.ext.snowflake.sqlgenerator.SnowflakeDropDefaultValueGenerator
+liquibase.ext.snowflake.sqlgenerator.SnowflakeSetTableRemarksGenerator
+liquibase.ext.snowflake.sqlgenerator.SnowflakeSetColumnRemarksGenerator

@@ -4,7 +4,7 @@
       "liquibase.structure.core.Table": [
         {
           "table": {
-            "name": "posts",
+            "name": "authors",
             "remarks": "A Test Remark"
           }
         }

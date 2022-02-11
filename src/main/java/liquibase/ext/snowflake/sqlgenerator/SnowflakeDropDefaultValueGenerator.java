@@ -8,7 +8,7 @@ import liquibase.sqlgenerator.SqlGeneratorChain;
 import liquibase.sqlgenerator.core.DropDefaultValueGenerator;
 import liquibase.statement.core.DropDefaultValueStatement;
 
-public class DropDefaultValueSnapshotGenerator extends DropDefaultValueGenerator {
+public class SnowflakeDropDefaultValueGenerator extends DropDefaultValueGenerator {
     @Override
     public int getPriority() {
         return PRIORITY_DATABASE;
