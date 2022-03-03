@@ -4,3 +4,4 @@ liquibase.ext.snowflake.sqlgenerator.SnowflakeDropDefaultValueGenerator
 liquibase.ext.snowflake.sqlgenerator.SnowflakeSetTableRemarksGenerator
 liquibase.ext.snowflake.sqlgenerator.SnowflakeSetColumnRemarksGenerator
 liquibase.ext.snowflake.sqlgenerator.InsertOrUpdateGeneratorSnowflake
+liquibase.ext.snowflake.sqlgenerator.SnowflakeDropProcedureGenerator
