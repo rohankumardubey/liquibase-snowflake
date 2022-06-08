@@ -6,6 +6,8 @@
 
 If you are adding this extension to your Liquibase CLI or to your project a dependency with 4.12.0+, you should remove that dependency to avoid code conflicts.
 
+Any bugfixes and issues should be directed to the [main Liquibase repository](https://github.com/liquibase/liquibase) 
+
 # Snowflake Extension
 [Liquibase](http://www.liquibase.org/) extension to add [Snowflake](https://www.snowflake.net/) support.  This repo should be considered the canonical version of the Snowflake extension and represents the latest and greatest version.
 
