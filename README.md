@@ -1,8 +1,14 @@
-# liquibase-snowflake [![Build and Test Extension](https://github.com/liquibase/liquibase-snowflake/actions/workflows/build.yml/badge.svg)](https://github.com/liquibase/liquibase-snowflake/actions/workflows/build.yml)
+# liquibase-snowflake 
 
-[Liquibase](http://www.liquibase.org/) extension to add [Snowflake](https://www.snowflake.net/) support.  This repo should be considered the canonical version of the Snowflake extension and represents the latest and greatest version.
+# DEPRECATED
+
+**As of Liquibase 4.12.0, Snowflake support ships directly in Liquibase and this extension is no longer needed.**
+
+If you are adding this extension to your Liquibase CLI or to your project a dependency with 4.12.0+, you should remove that dependency to avoid code conflicts.
 
 # Snowflake Extension
+[Liquibase](http://www.liquibase.org/) extension to add [Snowflake](https://www.snowflake.net/) support.  This repo should be considered the canonical version of the Snowflake extension and represents the latest and greatest version.
+
 Initial release supports applying formatted sql changesets.  It might support other types of refactorings but they haven't been tested.  Some of the interesting overrides / extensions are documented below.
 
 ## Database
