@@ -8,8 +8,11 @@ If you are adding this extension to your Liquibase CLI or to your project a depe
 
 Any bugfixes and issues should be directed to the [main Liquibase repository](https://github.com/liquibase/liquibase) 
 
+<Details>
+<Summary>Legacy Information</Summary>
+
 # Snowflake Extension
-[Liquibase](http://www.liquibase.org/) extension to add [Snowflake](https://www.snowflake.net/) support.  This repo should be considered the canonical version of the Snowflake extension and represents the latest and greatest version.
+[Liquibase](http://www.liquibase.org/) extension to add [Snowflake](https://www.snowflake.net/) support.  
 
 Initial release supports applying formatted sql changesets.  It might support other types of refactorings but they haven't been tested.  Some of the interesting overrides / extensions are documented below.
 
@@ -54,3 +57,5 @@ To map `text` datatype in changesets to `text` Snowflake datatype SnowflakeTextD
 The liquibase-snowflake extension now comes with integration test support via the liquibase-test-harness. 
 
 For more information on using the test-harness to test the snowflake extension, see [README.test-harness.md] 
+</Summary>
+</Details>
